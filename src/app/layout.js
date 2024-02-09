@@ -24,17 +24,18 @@ export default function RootLayout({ children }) {
     <html>
         <body>
           <Layout>
-            <Header style={{ display: 'flex', alignItems: 'center' }}>
-              <div className="demo-logo" float='right' />
+            <Header style={{ display: 'stretch', alignItems: 'center' }} className="transparent-menu">
+              <div float='right' />
               <Menu
-                theme="dark"
+                theme="light"
                 mode="horizontal"
                 defaultSelectedKeys={['2']}
                 items={items}
-                style={{ flex: 1, minWidth: 0 }}
+                style={{ flex: 0, minWidth: 1000 }}
+                className="transparent-menu"
               />
             </Header>
-            <Content style={{ padding: '0 4px' }}>
+            <Content style={{ padding: '0 4px' }} >
               <div
                 style={{
                   background: colorBgContainer,
