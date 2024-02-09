@@ -1,9 +1,12 @@
 import React from 'react';
-import { Input } from 'antd';
+import { Button, Input, Space } from 'antd';
 const { TextArea } = Input;
 const App = () => (
   <>
-    <TextArea rows={4} placeholder="maxLength is 6" maxLength={6} />
+    <Space.Compact>
+      <TextArea rows={4} placeholder="maxLength is 6" maxLength={6}  />
+      <Button type='primary'>Submit</Button>
+    </Space.Compact>
   </>
 );
 export default App;
