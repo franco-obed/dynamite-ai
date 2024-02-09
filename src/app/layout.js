@@ -6,7 +6,7 @@ import "./globals.css";
 
 const { Header, Content, Footer } = Layout;
 
-const items = new Array(15).fill(null).map((_, index) => ({
+const items = new Array(2).fill(null).map((_, index) => ({
   key: index + 1,
   label: `nav ${index + 1}`,
 }));
@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
         <body>
           <Layout>
             <Header style={{ display: 'flex', alignItems: 'center' }}>
-              <div className="demo-logo" />
+              <div className="demo-logo" float='right' />
               <Menu
                 theme="dark"
                 mode="horizontal"
@@ -34,28 +34,18 @@ export default function RootLayout({ children }) {
                 style={{ flex: 1, minWidth: 0 }}
               />
             </Header>
-            <Content style={{ padding: '0 48px' }}>
-              <Breadcrumb style={{ margin: '16px 0' }}>
-                <Breadcrumb.Item>Home</Breadcrumb.Item>
-                <Breadcrumb.Item>List</Breadcrumb.Item>
-                <Breadcrumb.Item>App</Breadcrumb.Item>
-              </Breadcrumb>
+            <Content style={{ padding: '0 4px' }}>
               <div
                 style={{
                   background: colorBgContainer,
-                  minHeight: 280,
-                  padding: 24,
+                  minHeight: 748,
+                  padding: 0,
                   borderRadius: borderRadiusLG,
                 }}
               >
                 {children}
               </div>
             </Content>
-            <footer>
-              <Footer style={{ textAlign: 'center' }}>
-                Ant Design ©{new Date().getFullYear()} Created by Ant UED
-              </Footer>
-            </footer>
         </Layout>
       </body>
     </html>
