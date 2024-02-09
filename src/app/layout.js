@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
     <html>
         <body>
           <Layout>
-            <Header style={{ display: 'stretch', alignItems: 'center' }} className="transparent-menu">
+          <Header style={{ position: 'fixed', width: '100%', zIndex: 100, display: 'flex', alignItems: 'center', background: 'transparent' }}>
               <div float='right' />
               <Menu
                 theme="light"
@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
                 className="transparent-menu"
               />
             </Header>
-            <Content style={{ padding: '0 4px' }} >
+            <Content >
               <div
                 style={{
                   background: colorBgContainer,

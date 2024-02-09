@@ -25,6 +25,15 @@
   gap: 0.5rem;
 }
 
+.content {
+  background: url('/background-image.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .description p {
   position: relative;
   margin: 0;
