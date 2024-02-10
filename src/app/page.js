@@ -12,7 +12,7 @@ export default function Home() {
         <Card cover={
           <Image
             width = '100%'
-            src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+            src="https://e1.pxfuel.com/desktop-wallpaper/763/43/desktop-wallpaper-javascript-nodejs.jpg"
             preview = {false}
             placeholder
           />
