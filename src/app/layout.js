@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
     <html>
         <body>
           <Layout>
-          <Header style={{ position: 'fixed', width: '100%', zIndex: 100, display: 'flex', alignItems: 'center', background: 'transparent' }}>
+          <Header style={{ position: 'fixed', padding: '0 0 0 0', width: '100%', zIndex: 100, display: 'flex', alignItems: 'center', background: 'transparent' }}>
               <div float='right' />
               <Menu
                 theme="light"
@@ -45,12 +45,16 @@ export default function RootLayout({ children }) {
               <div
                 style={{
                   background: colorBgContainer,
+                  position: 'fixed',
                   minHeight: 800,
-                  padding: 0,
+                  padding: '4% 0 0 0',
                   borderRadius: borderRadiusLG,
+                  width: '100%'
                 }}
               >
-                {children}
+                <div style={{ width: '50%', alignItems: 'center'}}>
+                  {children}
+                </div>
               </div>
             </Content>
         </Layout>

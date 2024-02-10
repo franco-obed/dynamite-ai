@@ -12,7 +12,7 @@ const App = () => {
       <Switch checked={!loading} onChange={onChange} />
       <Card
         style={{
-          width: 300,
+          width: '800px',
           marginTop: 16,
         }}
         loading={loading}
@@ -23,25 +23,7 @@ const App = () => {
           description="This is the description"
         />
       </Card>
-      <Card
-        style={{
-          width: 300,
-          marginTop: 16,
-        }}
-        actions={[
-          <SettingOutlined key="setting" />,
-          <EditOutlined key="edit" />,
-          <EllipsisOutlined key="ellipsis" />,
-        ]}
-      >
-        <Skeleton loading={loading} avatar active>
-          <Meta
-            avatar={<Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=2" />}
-            title="Card title"
-            description="This is the description"
-          />
-        </Skeleton>
-      </Card>
+    
     </>
   );
 };

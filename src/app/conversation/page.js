@@ -13,9 +13,9 @@ export default function Page() {
     return (
         <>  
             <Layout
-                style={{ padding: '24px 0', background: colorBgContainer, borderRadius: borderRadiusLG }}
+                style={{ padding: '1% 0 0 0', background: colorBgContainer, borderRadius: borderRadiusLG, width: '100%' }}
             >
-                <Sider style={{ background: colorBgContainer }} width={200}>
+                <Sider style={{ background: colorBgContainer }} width={'40%'}>
                     <Menu
                     mode="inline"
                     defaultSelectedKeys={['1']}
@@ -24,8 +24,8 @@ export default function Page() {
                     // items={items2}
                     />
                 </Sider>
-                <Content style={{ padding: '0 24px', minHeight: 280 }}>
-                    <Space direction="vertical">
+                <Content style={{ padding: '0 2%', minHeight: 280, width: '100%' }}>
+                    <Space direction="vertical" >
                         <AIDialog/>
                         <UserInput/>
                     </Space>
