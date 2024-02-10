@@ -11,11 +11,11 @@ const AIDialog = () => {
   const handleSubmit = async () => {
     setLoading(true); // Set loading to true before sending the request
     try {
-      const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+      const postDataToSend = { title: postData.title, body: postData.body };
+      const response = await fetch('https://1c3e-200-34-176-235.ngrok-free.app/api/create_post/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          // Add any additional headers if required
         },
         body: JSON.stringify(postData),
       });
@@ -35,11 +35,11 @@ const AIDialog = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setPostData({ ...postData, [name]: value });
+    setPostData({ [name]: value });
   };
 
   return (
-    <Card title="What API are you looking for?" loading={loading} size='large'>
+    <Card title="What API are you looking for?" loading={loading} size='large' style={{maxHeight: 800, overflow: 'auto'}}>
       {response && (
         <div>
           <h3>Response</h3>
@@ -48,11 +48,8 @@ const AIDialog = () => {
       )}
       <Form onFinish={handleSubmit}>
         <Space.Compact style={{width: '800px'}}>
-          <Form.Item>
-            <TextArea rows='1' name="title" placeholder="title" onChange={handleChange} size='large'></TextArea>
-          </Form.Item>
           <Form.Item name="body">
-            <Input rows='1' name="name" placeholder='body' onChange={handleChange}/>
+            <Input rows='1' name="message" placeholder='...' onChange={handleChange}/>
           </Form.Item>
           <Button type="primary" htmlType='submit' loading={loading}>Submit</Button>
         </Space.Compact>
