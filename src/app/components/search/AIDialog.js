@@ -39,11 +39,11 @@ const AIDialog = () => {
   };
 
   return (
-    <Card title="What API are you looking for?" loading={loading} size='large' style={{maxHeight: 800, width: 800, overflow: 'auto'}}>
+    <Card title="What API are you looking for?" loading={loading} size='large' style={{maxHeight:800, width: 800}}>
       {response && (
         <div>
           <h3>Response</h3>
-          <pre>{JSON.stringify(response, null, 2)}</pre>
+          <pre style={{textWrap: 'balance', overflow: 'auto'}}>{JSON.stringify(response, null, 2)}</pre>
         </div>
       )}
       <Form onFinish={handleSubmit}>
