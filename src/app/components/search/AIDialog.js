@@ -12,7 +12,7 @@ const AIDialog = () => {
     setLoading(true); // Set loading to true before sending the request
     try {
       const postDataToSend = { title: postData.title, body: postData.body };
-      const response = await fetch('https://1c3e-200-34-176-235.ngrok-free.app/api/create_post/', {
+      const response = await fetch('https://abc3-200-34-176-49.ngrok-free.app/api/create_post/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ const AIDialog = () => {
   };
 
   return (
-    <Card title="What API are you looking for?" loading={loading} size='large' style={{maxHeight: 800, overflow: 'auto'}}>
+    <Card title="What API are you looking for?" loading={loading} size='large' style={{maxHeight: 800, width: 800, overflow: 'auto'}}>
       {response && (
         <div>
           <h3>Response</h3>
