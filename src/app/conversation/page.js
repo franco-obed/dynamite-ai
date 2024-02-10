@@ -13,7 +13,7 @@ export default function Page() {
     return (
         <>  
             <Layout
-                style={{ padding: '1% 0 0 0', background: colorBgContainer, borderRadius: borderRadiusLG, minWidth: 2160 }}
+                style={{ padding: '2% 0 0 0', background: colorBgContainer, borderRadius: borderRadiusLG, minWidth: 2160 }}
             >
                 <Sider style={{ background: colorBgContainer }} width={'12%'}>
                     <Menu
@@ -27,7 +27,6 @@ export default function Page() {
                 <Content style={{ padding: '4% 2%', minHeight: 3840, width: 10 }}>
                     <Space direction="vertical" size='large' >
                         <AIDialog/>
-                        <UserInput/>
                     </Space>
                 </Content>
             </Layout>
